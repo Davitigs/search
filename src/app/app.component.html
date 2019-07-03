@@ -1,10 +1,34 @@
 
-  <input type="text" [(ngModel)]="keys" (keydown)="showData()">
 
-<!--<button (click)="showData()">clickme</button>-->
+<div class="container">
+  <span>Type a keyword: </span>
+  <input type="text" [formControl]="searchControl">
+<!--  <button (click)="showData(keys)">Click to find</button>-->
 
-  <div *ngFor = "let item of datum.items">{{item.volumeInfo.title }}</div>
 
+      <div class="blocks">
+        <div class="podBlocks" *ngFor = "let item of datum">
+          <mat-card class="example-card" >
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url('+item.volumeInfo?.imageLinks?.smallThumbnail+')',
+           'background-size': 'cover'}"></div>
+              <mat-card-title>{{item.volumeInfo?.title }}</mat-card-title>
+              <mat-card-subtitle *ngFor="let a of item.volumeInfo?.authors">{{a}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{item.volumeInfo?.imageLinks?.thumbnail}}" alt="|">
+            <mat-card-content>
+              <p>
+                {{item.volumeInfo.description}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+<!--              <button mat-button>LIKE</button>-->
+<!--              <button mat-button>SHARE</button>-->
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
 
-  <div>{{error}}</div>
+</div>
+
 

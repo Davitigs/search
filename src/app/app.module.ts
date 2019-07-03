@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FetchingDataService} from './fetching-data.service';
 import {HttpClientModule} from '@angular/common/http';
+import {MatButtonModule, MatCard, MatCardModule, MatCheckboxModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,14 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    BrowserAnimationsModule,
+    MatCardModule
+
   ],
-  providers: [FetchingDataService],
+  providers: [FetchingDataService, MatCard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

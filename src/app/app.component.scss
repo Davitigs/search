@@ -1,0 +1,37 @@
+
+
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.mat-card-img {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+}
+
+
+.blocks {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.container {
+  width: 1500px !important;
+  max-width: 1500px !important;
+}
+
+
+
+.blocks > .podBlocks {
+  min-width: 450px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+}
